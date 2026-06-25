@@ -1,0 +1,9 @@
+[Unit]
+Description=Transcriber periodic cleanup
+After=transcriber.service transcriber-bot.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/transcriber/cleanup.sh
+StandardOutput=journal
+StandardError=journal

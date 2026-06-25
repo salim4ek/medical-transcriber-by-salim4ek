@@ -1,0 +1,17 @@
+[Unit]
+Description=Transcriber HTTP API
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/transcriber
+ExecStart=/opt/transcriber/venv/bin/uvicorn api:app --host 0.0.0.0 --port 8000 --log-level info
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

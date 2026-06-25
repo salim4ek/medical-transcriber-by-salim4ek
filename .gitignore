@@ -1,0 +1,57 @@
+# ─── СЕКРЕТЫ (никогда не коммитить!) ───
+config.json
+*.env
+.env
+.bot_env
+*secret*
+*credentials*
+*.key
+*.pem
+
+# ─── Данные пациентов / медиа (приватность!) ───
+*.docx
+*.wav
+*.mp3
+*.m4a
+*.ogg
+*.opus
+*.webm
+*.aac
+*.flac
+input/
+output/
+temp/
+
+# ─── Состояние и логи ───
+*state*.json
+processed*.txt
+*.log
+*.out
+
+# ─── Python ───
+__pycache__/
+*.pyc
+venv/
+.venv/
+*.egg-info/
+
+# ─── Сборки (PyInstaller) ───
+build/
+build*/
+dist/
+dist*/
+*.zip
+*.manifest
+
+# ─── Бэкапы / временное ───
+_old_backups/
+*.bak
+*.bak-*
+*.tgz
+
+# ─── IDE / OS ───
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db

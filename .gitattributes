@@ -1,0 +1,7 @@
+# Консистентные переносы строк
+* text=auto eol=lf
+
+# Бинарные файлы
+*.png binary
+*.ico binary
+*.jpg binary

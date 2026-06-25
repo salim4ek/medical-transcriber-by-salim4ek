@@ -1,0 +1,21 @@
+[Unit]
+Description=Transcriber Telegram bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=botuser
+Group=botuser
+Type=simple
+WorkingDirectory=/opt/transcriber
+ExecStart=/opt/transcriber/venv/bin/python /opt/transcriber/bot.py
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+Environment=PYTHONUNBUFFERED=1
+Environment=LLM_BASE_URL=https://your-llm-endpoint.example
+Environment=LLM_API_KEY=YOUR_LLM_API_KEY
+
+[Install]
+WantedBy=multi-user.target

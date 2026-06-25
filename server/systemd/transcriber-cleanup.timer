@@ -1,0 +1,12 @@
+[Unit]
+Description=Run transcriber cleanup every hour
+Requires=transcriber-cleanup.service
+
+[Timer]
+# Run 5 min after boot, then every hour
+OnBootSec=5min
+OnUnitActiveSec=1h
+Persistent=true
+
+[Install]
+WantedBy=timers.target
